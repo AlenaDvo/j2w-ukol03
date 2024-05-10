@@ -7,7 +7,7 @@ public class Vizitka {
     public String obec;
 
     public String psc;
-    private CelaAdresa celaAdresa;
+    private String celaAdresa;
     public String email;
     public String telefon;
     public String web;
@@ -21,7 +21,7 @@ public class Vizitka {
         this.email = email;
         this.telefon = telefon;
         this.web = web;
-        this.celaAdresa = new CelaAdresa(ulice, obec, psc);
+        this.celaAdresa = ulice + ", " + obec;
     }
 
     public Vizitka() {
@@ -59,7 +59,7 @@ public class Vizitka {
         return web;
     }
 
-    public CelaAdresa getCelaAdresa() {
+    public String getCelaAdresa() {
         return celaAdresa;
     }
 
@@ -69,7 +69,9 @@ public class Vizitka {
                 "jmeno='" + jmeno + '\'' +
                 ", firma='" + firma + '\'' +
                 ", ulice='" + ulice + '\'' +
-
+                ", obec='" + obec + '\'' +
+                ", psc='" + psc + '\'' +
+                ", celaAdresa='" + celaAdresa + '\'' +
                 ", email='" + email + '\'' +
                 ", telefon='" + telefon + '\'' +
                 ", web='" + web + '\'' +
