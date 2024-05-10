@@ -13,17 +13,17 @@
 <body>
 <div class="detail">
     <div class="vizitka">
-        <div class="jmeno">Dita (Přikrylová) Formánková</div>
-        <div class="firma">Czechitas z. s.</div>
+        <div class="jmeno">${detailVizitky.jmeno}</div>
+        <div class="firma">${detailVizitky.firma}</div>
         <div class="udaje">
             <div class="adresa">
-                <div>Václavské náměstí 837/11</div>
-                <div><span>11000</span> Praha 1</div>
+                <div>${detailVizitky.ulice}</div>
+                <div><span>${detailVizitky.psc}</span> ${detailVizitky.obec}</div>
             </div>
             <div class="kontakty">
-                <div><i class="las la-at"></i> <span>dita@czechitas.cs</span></div>
-                <div><i class="las la-phone-alt"></i> <span>+420 800123456</span></div>
-                <div><i class="las la-globe"></i> <span>www.czechitas.cz</span></div>
+                [#if detailVizitky.email??]<div><i class="las la-at"></i> <span>${detailVizitky.email}</span></div>[/#if]
+                [#if detailVizitky.telefon??]<div><i class="las la-phone-alt"></i> <span>${detailVizitky.telefon}</span></div>[/#if]
+                [#if detailVizitky.web??]<div><i class="las la-globe"></i> <span>${detailVizitky.web}</span></div>[/#if]
             </div>
         </div>
     </div>
