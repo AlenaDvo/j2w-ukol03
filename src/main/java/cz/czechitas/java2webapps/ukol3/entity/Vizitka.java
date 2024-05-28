@@ -4,24 +4,19 @@ public class Vizitka {
     public String jmeno;
     public String firma;
     public String ulice;
-    public String obec;
-
-    public String psc;
-    private String celaAdresa;
+    public String obecPsc;
     public String email;
     public String telefon;
     public String web;
 
-    public Vizitka(String jmeno, String firma, String ulice, String obec, String psc, String email, String telefon, String web) {
+    public Vizitka(String jmeno, String firma, String ulice, String obecPsc, String email, String telefon, String web) {
         this.jmeno = jmeno;
         this.firma = firma;
         this.ulice = ulice;
-        this.obec = obec;
-        this.psc = psc;
+        this.obecPsc = obecPsc;
         this.email = email;
         this.telefon = telefon;
         this.web = web;
-        this.celaAdresa = ulice + ", " + obec;
     }
 
     public Vizitka() {
@@ -39,12 +34,8 @@ public class Vizitka {
         return ulice;
     }
 
-    public String getObec() {
-        return obec;
-    }
-
-    public String getPsc() {
-        return psc;
+    public String getObecPsc() {
+        return obecPsc;
     }
 
     public String getEmail() {
@@ -59,9 +50,7 @@ public class Vizitka {
         return web;
     }
 
-    public String getCelaAdresa() {
-        return celaAdresa;
-    }
+    public String getCelaAdresa() {return ulice + obecPsc;}
 
     @Override
     public String toString() {
@@ -69,9 +58,7 @@ public class Vizitka {
                 "jmeno='" + jmeno + '\'' +
                 ", firma='" + firma + '\'' +
                 ", ulice='" + ulice + '\'' +
-                ", obec='" + obec + '\'' +
-                ", psc='" + psc + '\'' +
-                ", celaAdresa='" + celaAdresa + '\'' +
+                ", obecPsc='" + obecPsc + '\'' +
                 ", email='" + email + '\'' +
                 ", telefon='" + telefon + '\'' +
                 ", web='" + web + '\'' +

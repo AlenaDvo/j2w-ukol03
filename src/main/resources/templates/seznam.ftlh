@@ -21,15 +21,12 @@
                 <div class="udaje">
                     <div class="adresa">
                         <div>${vizitka.ulice}</div>
-                        <div><span>${vizitka.psc}</span> ${vizitka.obec}</div>
+                        <div><span>${vizitka.obecPsc}</span></div>
                     </div>
                     <div class="kontakty">
-                        [#if vizitka.email??]
-                            <div><i class="las la-at"></i> <span>${vizitka.email}</span></div>[/#if]
-                        [#if vizitka.telefon??]
-                            <div><i class="las la-phone-alt"></i> <span>${vizitka.telefon}</span></div>[/#if]
-                        [#if vizitka.web??]
-                            <div><i class="las la-globe"></i> <span>${vizitka.web}</span></div>[/#if]
+                        <div><i class="las la-at"></i>[#if vizitka.email??]<span>${vizitka.email}</span>[#else]<small><em>neuvedeno</em></small>[/#if]</div>
+                        <div><i class="las la-phone-alt"></i>[#if vizitka.telefon??]<span>${vizitka.telefon}</span>[#else]<small><em>neuvedeno</em></small>[/#if]</div>
+                        <div><i class="las la-globe"></i>[#if vizitka.web??]<span>${vizitka.web}</span>[#else]<small><em>neuvedeno</em></small>[/#if]</div>
                     </div>
                 </div>
             </div>

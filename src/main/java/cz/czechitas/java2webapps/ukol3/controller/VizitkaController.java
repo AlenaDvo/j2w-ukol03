@@ -15,11 +15,11 @@ import java.util.List;
 public class VizitkaController {
 
     private final List<Vizitka> seznamVizitek = List.of(
-            new Vizitka("Alena Dvořáková", "Oracle s.r.o.", "Karlovo náměstí 2097/9", "Praha 2", "120 00", "alenadvorakova@oracle.com", "00420 608 541 324", "www.oracle.com"),
-            new Vizitka("Pavlína Sedláčková", "Google Ltd.", "Antonínova 5174", "Zlín", "760 01","pavlinasedlackova@google.com", "0420 608 745 963", "www.google.com"),
-            new Vizitka("Helena Szewieczek", "Amazon a.s.", "Hlavní třída 439/71", "Havířov", "736 01", "helenaszewieczek@amazon.com", null, "www.amazon.com"),
-            new Vizitka("Hana Martinková Kuchyňková", "Microsoft Ltd.", "Tomanova 1530/7", "Brno", "613 00", "hanamartinkovakuchynkova@microsoft.com", "0420 608 745 963", null),
-            new Vizitka("Dagmar Podkulová", "Apple s.r.o.", "Hlavní třída 679/116", "Ostrava", "708 00", null, "0420 773 258 147", null)
+            new Vizitka("Alena Dvořáková", "Oracle s.r.o.", "Karlovo náměstí 2097/9", "120 00 Praha 2", "alenadvorakova@oracle.com", "00420 608 541 324", "www.oracle.com"),
+            new Vizitka("Pavlína Sedláčková", "Google Ltd.", "Antonínova 5174", "760 01 Zlín","pavlinasedlackova@google.com", "0420 608 745 963", "www.google.com"),
+            new Vizitka("Helena Szewieczek", "Amazon a.s.", "Hlavní třída 439/71", "736 01 Havířov", "helenaszewieczek@amazon.com", null, "www.amazon.com"),
+            new Vizitka("Hana Martinková Kuchyňková", "Microsoft Ltd.", "Tomanova 1530/7", "613 00 Brno", "hanamartinkovakuchynkova@microsoft.com", "0420 608 745 963", null),
+            new Vizitka("Dagmar Podkulová", "Apple s.r.o.", "Hlavní třída 679/116", "708 00 Ostrava", null, "0420 773 258 147", null)
             );
     @GetMapping("/")
     public ModelAndView seznam() {
